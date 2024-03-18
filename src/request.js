@@ -16,7 +16,7 @@ import {
 	validateReferrerPolicy, determineRequestsReferrer, DEFAULT_REFERRER_POLICY
 } from './utils/referrer.js';
 
-const INTERNALS = Symbol('Request internals');
+const INTERNALS = 'Request internals';
 
 /**
  * Check if `obj` is an instance of Request.

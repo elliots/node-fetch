@@ -2179,7 +2179,7 @@ describe('node-fetch', () => {
 	it('supports supplying a famliy option to the agent', async () => {
 		const url = `${base}redirect/301`;
 		const families = [];
-		const family = Symbol('family');
+		const family = 'family';
 		function lookupSpy(hostname, options, callback) {
 			families.push(options.family);
 

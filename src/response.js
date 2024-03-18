@@ -8,7 +8,7 @@ import Headers from './headers.js';
 import Body, {clone, extractContentType} from './body.js';
 import {isRedirect} from './utils/is-redirect.js';
 
-const INTERNALS = Symbol('Response internals');
+const INTERNALS = 'Response internals';
 
 /**
  * Response class

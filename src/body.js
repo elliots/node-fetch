@@ -17,7 +17,7 @@ import {FetchBaseError} from './errors/base.js';
 import {isBlob, isURLSearchParameters} from './utils/is.js';
 
 const pipeline = promisify(Stream.pipeline);
-const INTERNALS = Symbol('Body internals');
+const INTERNALS = 'Body internals';
 
 /**
  * Body mixin
