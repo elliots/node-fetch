@@ -21,6 +21,7 @@ const INTERNALS = 'Response internals';
  */
 export default class Response extends Body {
 	constructor(body = null, options = {}) {
+		console.log('body', body, 'options', options)
 		super(body, options);
 
 		// eslint-disable-next-line no-eq-null, eqeqeq, no-negated-condition

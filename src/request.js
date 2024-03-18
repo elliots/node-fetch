@@ -46,6 +46,7 @@ const doBadDataWarn = deprecate(() => {},
  */
 export default class Request extends Body {
 	constructor(input, init = {}) {
+		console.log('input', input, 'init', init)
 		let parsedURL;
 
 		// Normalize input and force URL to be encoded as UTF-8 (https://github.com/node-fetch/node-fetch/issues/245)
@@ -55,6 +56,8 @@ export default class Request extends Body {
 			parsedURL = new URL(input);
 			input = {};
 		}
+
+		console.log('input2', input, 'init', init, 'parsedURL', parsedURL)
 
 		if (parsedURL.username !== '' || parsedURL.password !== '') {
 			throw new TypeError(`${parsedURL} is an url with embedded credentials.`);
@@ -129,6 +132,8 @@ export default class Request extends Body {
 			signal,
 			referrer
 		};
+
+		console.log('internals', this[INTERNALS])
 
 		// Node-fetch-only options
 		this.follow = init.follow === undefined ? (input.follow === undefined ? 20 : input.follow) : init.follow;
